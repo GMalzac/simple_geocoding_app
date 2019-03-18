@@ -4,7 +4,13 @@ class FlatsController < ApplicationController
   # GET /flats
   # GET /flats.json
   def index
-    @flats = Flat.all
+    @flats = Flat.where.not(latitude: nil, longitude: nil)
+    @markers = @flats.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   # GET /flats/1
