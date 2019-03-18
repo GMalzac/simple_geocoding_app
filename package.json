@@ -2,6 +2,7 @@
   "name": "simple_geocoding_app",
   "private": true,
   "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^3.1.6",
     "@rails/webpacker": "^4.0.2",
     "bootstrap": "^4.3.1",
     "jquery": "^3.3.1",
